@@ -1,0 +1,272 @@
+<?php
+
+return [
+    'common' => [
+        'actions' => 'Actions',
+        'create' => 'Create',
+        'edit' => 'Edit',
+        'update' => 'Update',
+        'new' => 'New',
+        'cancel' => 'Cancel',
+        'attach' => 'Attach',
+        'detach' => 'Detach',
+        'save' => 'Save',
+        'delete' => 'Delete',
+        'delete_selected' => 'Delete selected',
+        'search' => 'Search...',
+        'back' => 'Back to Index',
+        'are_you_sure' => 'Are you sure?',
+        'no_items_found' => 'No items found',
+        'created' => 'Successfully created',
+        'saved' => 'Saved successfully',
+        'removed' => 'Successfully removed',
+    ],
+
+    'contacts' => [
+        'name' => 'Contacts',
+        'index_title' => 'Contacts List',
+        'new_title' => 'New Contact',
+        'create_title' => 'Create Contact',
+        'edit_title' => 'Edit Contact',
+        'show_title' => 'Show Contact',
+        'inputs' => [
+            'nom_prenom' => 'Nom Prenom',
+            'email' => 'Email',
+            'objet' => 'Objet',
+            'telephone' => 'Telephone',
+            'message' => 'Message',
+            'your-consent' => 'Your Consent',
+        ],
+    ],
+
+    'utilisateurs' => [
+        'name' => 'Utilisateurs',
+        'index_title' => 'Liste utilisateur',
+        'new_title' => 'Nouveau utilisateur',
+        'create_title' => 'Nouveau utilisateur',
+        'edit_title' => 'Editer  utilisateur',
+        'show_title' => 'Affichage  utilisateur',
+        'inputs' => [
+            'name' => 'Nom',
+            'email' => 'Email',
+            'password' => 'Mot de passe',
+        ],
+    ],
+
+    'maison_certifi' => [
+        'name' => 'Maison Certifié',
+        'index_title' => 'La liste',
+        'new_title' => 'Ajouter une maison certifié',
+        'create_title' => 'Ajouter',
+        'edit_title' => 'Modifier',
+        'show_title' => 'Afficher',
+        'inputs' => [
+            'nom_prenom' => 'Nom et Prenoms',
+            'telephone' => 'Telephone',
+            'email' => 'Email',
+            'surface_habitable' => 'Surface habitable',
+            'commune' => 'Votre commune',
+            'typelogement' => 'Type de logement',
+            'nbr_chambre' => 'Nbr de chambre',
+            'nbr_salle' => 'Nbr de salle de bain',
+            'moment_acquis' => 'Moment d acquisition',
+            'budget' => 'Votre budget',
+            'ma_preference' => 'Ma preference',
+            'autre_budget' => 'Autre budget',
+            'type_construction' => 'Type de construction',
+            'type_emploi' => 'Type d emploi',
+            'proprietaire' => 'Vous etes proprietaire',
+        ],
+    ],
+
+    'type_de_surfaces' => [
+        'name' => 'Type De Surfaces',
+        'index_title' => 'TypeDeSurfaces List',
+        'new_title' => 'New Type de surface',
+        'create_title' => 'Create TypeDeSurface',
+        'edit_title' => 'Edit TypeDeSurface',
+        'show_title' => 'Show TypeDeSurface',
+        'inputs' => [
+            'libel' => 'Nom',
+        ],
+    ],
+
+    'critere_immeubles' => [
+        'name' => 'Critere Immeubles',
+        'index_title' => 'CritereImmeubles List',
+        'new_title' => 'New Critere immeuble',
+        'create_title' => 'Create CritereImmeuble',
+        'edit_title' => 'Edit CritereImmeuble',
+        'show_title' => 'Show CritereImmeuble',
+        'inputs' => [
+            'libel' => 'Nom',
+        ],
+    ],
+
+    'achete_nows' => [
+        'name' => 'Achete Nows',
+        'index_title' => 'AcheteNows List',
+        'new_title' => 'New Achete now',
+        'create_title' => 'Create AcheteNow',
+        'edit_title' => 'Edit AcheteNow',
+        'show_title' => 'Show AcheteNow',
+        'inputs' => [
+            'nom_prenom' => 'Nom et penoms',
+            'telephone' => 'Telephone',
+            'email' => 'Email',
+            'ou_recherchez_vous' => 'Ou recherchez vous',
+            'typelogement' => 'Type de logement',
+            'surface-recherch' => 'Surface recherchée',
+            'criter_appart' => 'Critere appartement',
+            'filtrag_annonce' => 'Filtrage annonce',
+            'min_budget' => 'Min budget',
+            'typelogement' => 'Type de logement',
+            'max_budget' => 'Max budget',
+            'criter_appart' => 'Critere de l appartement',
+            'nbr_piece' => 'Nbr de piece',
+            'filtrag_annonce' => 'Filtrage annonce',
+            'nbr_chambre' => 'Nbr de chambre',
+            'surface' => 'Surface',
+        ],
+    ],
+
+    'terrain_certifi' => [
+        'name' => 'Terrain Certifié',
+        'index_title' => 'La liste',
+        'new_title' => 'Nouveau terrain certifié',
+        'create_title' => 'Nouveau',
+        'edit_title' => 'Modifier',
+        'show_title' => 'Afficher',
+        'inputs' => [
+            'nom_prenom' => 'Nom et prenoms',
+            'telephone' => 'Telephone',
+            'email' => 'Email',
+            'commune' => 'Commune',
+            'info_spplement' => 'Info supplementaire',
+            'surface' => 'Surface',
+            'obj_achat' => 'Objet d achat',
+            'min_budget' => 'Min du budget',
+            'moment_acquis' => 'Moment d acquisition',
+            'max_budget' => 'Max du budget',
+            'config_terrain' => 'Configuration du terrain',
+            'prec_config_terrain' => 'Autre configuration terrain',
+            'financement' => 'Financement',
+            'votre_poste' => 'Votre poste',
+            'partic_group' => 'Vous êtes',
+        ],
+    ],
+
+    'certifications' => [
+        'name' => 'Certifications',
+        'index_title' => 'La liste',
+        'new_title' => 'Nouvelle certification',
+        'create_title' => 'Nouveau',
+        'edit_title' => 'Modifier',
+        'show_title' => 'Afficher',
+        'inputs' => [
+            'nom_prenom' => 'Nom et prenoms',
+            'adresse' => 'Adresse',
+            'email' => 'Email',
+            'contact' => 'Contact',
+            'typebien' => 'Type de bien',
+        ],
+    ],
+
+    'all_rendez_vous' => [
+        'name' => 'All Rendez Vous',
+        'index_title' => 'La liste',
+        'new_title' => 'Nouveau rendez vous',
+        'create_title' => 'Nouveau',
+        'edit_title' => 'Modifier',
+        'show_title' => 'Afficher',
+        'inputs' => [
+            'nompre' => 'Nom et prenoms',
+            'telephone' => 'Telephone',
+            'votr_email' => 'Votre email',
+            'rdv-date' => 'Date rendez vous',
+            'rdv-hour' => 'Heur du rendez vous',
+        ],
+    ],
+
+    'etat_achats' => [
+        'name' => 'Etat Achats',
+        'index_title' => 'EtatAchats List',
+        'new_title' => 'New Etat achat',
+        'create_title' => 'Create EtatAchat',
+        'edit_title' => 'Edit EtatAchat',
+        'show_title' => 'Show EtatAchat',
+        'inputs' => [
+            'libel' => 'Nom',
+        ],
+    ],
+
+    'exigence_particulieres' => [
+        'name' => 'Exigence Particulieres',
+        'index_title' => 'ExigenceParticulieres List',
+        'new_title' => 'New Exigence particuliere',
+        'create_title' => 'Create ExigenceParticuliere',
+        'edit_title' => 'Edit ExigenceParticuliere',
+        'show_title' => 'Show ExigenceParticuliere',
+        'inputs' => [
+            'libel' => 'Nom',
+        ],
+    ],
+
+    'surface_annexes' => [
+        'name' => 'Surface Annexes',
+        'index_title' => 'SurfaceAnnexes List',
+        'new_title' => 'New Surface annexe',
+        'create_title' => 'Create SurfaceAnnexe',
+        'edit_title' => 'Edit SurfaceAnnexe',
+        'show_title' => 'Show SurfaceAnnexe',
+        'inputs' => [
+            'libel' => 'Nom',
+        ],
+    ],
+
+    'type_certifications' => [
+        'name' => 'Type Certifications',
+        'index_title' => 'TypeCertifications List',
+        'new_title' => 'New Type certification',
+        'create_title' => 'Create TypeCertification',
+        'edit_title' => 'Edit TypeCertification',
+        'show_title' => 'Show TypeCertification',
+        'inputs' => [
+            'libel' => 'Nom',
+        ],
+    ],
+
+    'exigence_immeubles' => [
+        'name' => 'Exigence Immeubles',
+        'index_title' => 'ExigenceImmeubles List',
+        'new_title' => 'New Exigence immeuble',
+        'create_title' => 'Create ExigenceImmeuble',
+        'edit_title' => 'Edit ExigenceImmeuble',
+        'show_title' => 'Show ExigenceImmeuble',
+        'inputs' => [
+            'libel' => 'Nom',
+        ],
+    ],
+
+    'roles' => [
+        'name' => 'Roles',
+        'index_title' => 'Roles List',
+        'create_title' => 'Create Role',
+        'edit_title' => 'Edit Role',
+        'show_title' => 'Show Role',
+        'inputs' => [
+            'name' => 'Name',
+        ],
+    ],
+
+    'permissions' => [
+        'name' => 'Permissions',
+        'index_title' => 'Permissions List',
+        'create_title' => 'Create Permission',
+        'edit_title' => 'Edit Permission',
+        'show_title' => 'Show Permission',
+        'inputs' => [
+            'name' => 'Name',
+        ],
+    ],
+];
