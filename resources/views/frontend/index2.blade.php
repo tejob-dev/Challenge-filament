@@ -4719,7 +4719,7 @@
                                         <p>Je veux acheter</p>
                                         <br>
                                         <div class="make-display-grid-3col">
-                                            @foreach(App\models\EtatAchat::get() as $etatAchatId)
+                                            @foreach(App\Models\EtatAchat::get() as $etatAchatId)
                                             <label class="new-check">
                                                 <input type="checkbox" name="etat_achat[]" value="{{$etatAchatId->id}}" />
                                                 <div></div>{{$etatAchatId->libel}}
@@ -4763,7 +4763,7 @@
                                         <p>En cas d’habitation en immeuble vos exigences particulières</p>
                                         <br>
                                         <div class="make-display-grid-3col">
-                                            @foreach(App\models\ExigenceParticuliere::get() as $exigenceParticuliere)
+                                            @foreach(App\Models\ExigenceParticuliere::get() as $exigenceParticuliere)
                                             <label class="new-check">
                                                 <input type="checkbox" name="exigence_particuliere[]" value="{{$exigenceParticuliere->id}}" />
                                                 <div></div>{{$exigenceParticuliere->libel}}

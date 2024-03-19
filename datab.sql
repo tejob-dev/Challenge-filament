@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `achete_nows` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table challengedbext.achete_nows : ~0 rows (environ)
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `certifications` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table challengedbext.certifications : ~0 rows (environ)
 
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table challengedbext.contacts : ~0 rows (environ)
 
@@ -243,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `maison_certifs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table challengedbext.maison_certifs : ~0 rows (environ)
 
@@ -463,12 +463,6 @@ CREATE TABLE IF NOT EXISTS `rendez_vous` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table challengedbext.rendez_vous : ~0 rows (environ)
-INSERT INTO `rendez_vous` (`id`, `nompre`, `telephone`, `votr_email`, `rdv-date`, `rdv-hour`, `created_at`, `updated_at`) VALUES
-	(1, 'Ut id quis ut sit. Explicabo iure reprehenderit ex quia modi. Quos sit alias id amet qui quae laudantium. Adipisci voluptas omnis modi quas enim.', 'Sed et suscipit nisi voluptate. Vero qui sed dicta ex ut aspernatur natus. Harum in adipisci in dolores quia. Molestiae deleniti distinctio cum iste tenetur. Tempore harum accusamus et rerum deleniti. Et at repellat provident esse.', 'Nulla tenetur est illo omnis. Aperiam eaque labore dicta mollitia in. Eos quis similique occaecati. Aut ut ex suscipit similique natus. Quo repudiandae totam odio dolor reiciendis. Vel neque quod amet nesciunt vero excepturi est iusto.', 'Alias soluta non voluptatem. Sed molestiae ullam consequatur ut quia. Veniam beatae beatae alias deserunt inventore necessitatibus aut officia. Eos quis voluptatem quisquam explicabo quia.', 'Quidem neque quaerat natus et alias et temporibus. Saepe nihil omnis molestiae consequatur eveniet. Exercitationem sit ratione laborum autem ut dignissimos. Et ea deleniti magnam. Quas natus accusamus unde in odit.', '2024-03-17 02:25:55', '2024-03-17 02:25:55'),
-	(2, 'Esse dicta et repellendus repellat magni. Iste optio eveniet laborum assumenda neque quae eius qui.', 'Numquam nihil ut dolorem qui. Delectus sit eveniet sunt praesentium qui. Et sit recusandae aliquid recusandae animi sunt optio laboriosam.', 'Illum ducimus vel doloribus voluptatem ex voluptatem impedit. Quibusdam harum corrupti qui aut aliquid. Quibusdam in quod culpa beatae. Autem dolorem architecto optio incidunt sed quia vel.', 'Corporis dolorem nesciunt praesentium consequatur ex et. Ut esse sit eum quisquam in. Deleniti ut est sed aliquam aut recusandae.', 'Commodi quia qui esse explicabo iusto. Beatae qui laudantium et eaque nemo quaerat. Inventore porro incidunt aut optio.', '2024-03-17 02:25:55', '2024-03-17 02:25:55'),
-	(3, 'Magnam laborum ea beatae culpa odio quidem consequatur qui. Ipsa est omnis labore enim omnis quidem earum sunt. Minus animi soluta est laboriosam consequatur eum odit.', 'Rerum ea fugiat fuga autem. Rem quasi vel impedit numquam omnis. Eveniet molestias rerum beatae ut. Impedit modi dolorem voluptas quod omnis rerum repellendus repudiandae.', 'Eius quis suscipit est explicabo in facere qui excepturi. Et sit saepe sed dolorem. Earum voluptatem eaque unde qui vitae occaecati quas quo.', 'Magnam optio fugiat eius consequatur. Magnam eos iusto vero reiciendis facere itaque. Aut facere provident ratione eum consequatur optio. Ut nobis exercitationem quam eveniet ut veniam sed. Rerum rerum a harum alias a.', 'In facere est deleniti ex. Modi nesciunt voluptatem numquam consectetur adipisci rerum. Natus quia delectus consectetur odio iure. Optio quia possimus facere quia beatae quos.', '2024-03-17 02:25:55', '2024-03-17 02:25:55'),
-	(4, 'Nemo quae dolorem aspernatur et unde consectetur provident. Et delectus accusamus quis soluta fugiat. Voluptatum corporis nostrum et consequatur laborum. Iure et exercitationem at ut nostrum rem.', 'Deserunt porro debitis illum sit velit. Sunt facilis ad cum non. Optio magni earum error neque animi. Sint quo cum nihil dicta corporis.', 'Facere molestias nemo ut at alias aspernatur. Tempore rerum eum nostrum minus cupiditate et rerum adipisci. Et corrupti voluptatibus cum delectus dolor excepturi neque. Molestiae eum qui est provident maiores voluptas alias qui.', 'Eum reiciendis quas deleniti assumenda suscipit. Itaque aliquid modi et rerum deserunt sed laudantium. Iure eveniet impedit est accusantium debitis velit earum ipsa.', 'Quae non reprehenderit adipisci doloribus. Minima quos corrupti asperiores aliquam repudiandae saepe. Officiis ut minus dolorum quasi porro. Nam aut rerum saepe qui enim ad in.', '2024-03-17 02:25:55', '2024-03-17 02:25:55'),
-	(5, 'Illum earum aut eligendi. Ipsam soluta aut esse nobis et sit laboriosam. Omnis et sint beatae veritatis. Cupiditate accusamus hic consequatur laudantium corrupti eum soluta. Harum eum eos delectus architecto. Blanditiis eaque ea iusto.', 'Ea et quasi et illum. Asperiores nisi sed est amet cupiditate ut. Incidunt quo qui illum quidem illum.', 'Necessitatibus est ipsa autem vero deserunt nesciunt suscipit. Excepturi dicta expedita harum et consequatur velit modi. Et quia quis et rerum deserunt.', 'Qui et iure eligendi. Saepe et est atque facere autem perferendis. Nesciunt totam voluptatem harum omnis. Aut dolorem animi dolorem autem. Cum est illum aut autem eum qui.', 'Molestiae dolorem sed sunt praesentium vel vero accusamus incidunt. Rerum totam sed culpa tempore soluta dolor. Rerum expedita et laborum nihil aspernatur eaque. Unde nobis nihil facilis optio accusantium ipsum aliquid.', '2024-03-17 02:25:55', '2024-03-17 02:25:55');
 
 -- Listage de la structure de table challengedbext. roles
 CREATE TABLE IF NOT EXISTS `roles` (
@@ -650,9 +644,15 @@ CREATE TABLE IF NOT EXISTS `surface_annexes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table challengedbext.surface_annexes : ~0 rows (environ)
+INSERT INTO `surface_annexes` (`id`, `libel`, `created_at`, `updated_at`) VALUES
+	(6, 'Balcon', '2024-03-19 12:03:26', '2024-03-19 12:03:26'),
+	(7, 'Terrasse', '2024-03-19 12:03:30', '2024-03-19 12:03:30'),
+	(8, 'Garage', '2024-03-19 12:03:36', '2024-03-19 12:03:36'),
+	(9, 'Jardin', '2024-03-19 12:03:42', '2024-03-19 12:03:42'),
+	(10, 'Piscine', '2024-03-19 12:03:47', '2024-03-19 12:03:47');
 
 -- Listage de la structure de table challengedbext. terrain_certifs
 CREATE TABLE IF NOT EXISTS `terrain_certifs` (
@@ -686,13 +686,13 @@ CREATE TABLE IF NOT EXISTS `type_certifications` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table challengedbext.type_certifications : ~3 rows (environ)
 INSERT INTO `type_certifications` (`id`, `libel`, `created_at`, `updated_at`) VALUES
 	(6, 'Certification administrative', '2024-03-18 15:24:56', '2024-03-18 15:24:56'),
-	(7, 'Certification juridique', '2024-03-18 15:25:10', '2024-03-18 15:25:10'),
-	(8, 'Certification technique', '2024-03-18 15:25:28', '2024-03-18 15:25:28');
+	(8, 'Certification technique', '2024-03-18 15:25:28', '2024-03-18 15:25:28'),
+	(9, 'Certification juridique', '2024-03-19 10:15:36', '2024-03-19 10:15:36');
 
 -- Listage de la structure de table challengedbext. type_de_surfaces
 CREATE TABLE IF NOT EXISTS `type_de_surfaces` (
@@ -725,7 +725,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Listage des données de la table challengedbext.users : ~1 rows (environ)
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, 'HEYZ Account', 'admin@admin.com', '2024-03-17 02:25:50', '$2y$10$896NodTfaiJSqnaAU45MD.tcJWQ/1naVMqFIyN0Ke8Wy/eu0Fc7CO', 'kqaWBFvLohKSub3kKsvn53ziru2sIoz6zf2DyKO52J0t4nwLAmWKYjOORY7o', '2024-03-17 02:25:50', '2024-03-18 15:38:37');
+	(1, 'HEYZ Account', 'admin@heyzci.site', '2024-03-17 02:25:50', '$2y$10$896NodTfaiJSqnaAU45MD.tcJWQ/1naVMqFIyN0Ke8Wy/eu0Fc7CO', 'kqaWBFvLohKSub3kKsvn53ziru2sIoz6zf2DyKO52J0t4nwLAmWKYjOORY7o', '2024-03-17 02:25:50', '2024-03-18 15:38:37');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
