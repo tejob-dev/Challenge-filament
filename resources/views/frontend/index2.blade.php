@@ -4735,7 +4735,7 @@
                                         <p>Pour votre logement avez-vous besoin de surfaces annexes</p>
                                         <br>
                                         <div class="make-display-grid-3col">
-                                            @foreach(App\models\SurfaceAnnexe::get() as $surfaceAnnexe)
+                                            @foreach(App\Models\SurfaceAnnexe::get() as $surfaceAnnexe)
                                             <label class="new-check">
                                                 <input type="checkbox" name="surface_annexe[]" value="{{$surfaceAnnexe->id}}" />
                                                 <div></div>{{$surfaceAnnexe->libel}}
