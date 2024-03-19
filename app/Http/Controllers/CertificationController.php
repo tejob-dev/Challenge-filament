@@ -58,6 +58,28 @@ class CertificationController extends Controller
             ->route('certifications.edit', $certification)
             ->withSuccess(__('crud.common.created'));
     }
+    
+    /**
+     * @param \App\Http\Requests\CertificationStoreRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeFront(CertificationStoreRequest $request)
+    {
+        // $this->authorize('create', Certification::class);
+
+        $validated = $request->validated();
+
+        $type_certif = $validated["type_certif"];
+        unset($validated["type_certif"]);
+
+        $certification = Certification::create($validated);
+
+        if($certification){
+            $certification->typeCertifications()->attach($type_certif, []);
+        }
+
+        return view("frontend.op-success");
+    }
 
     /**
      * @param \Illuminate\Http\Request $request

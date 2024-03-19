@@ -57,6 +57,24 @@ class TerrainCertifController extends Controller
             ->route('terrain-certifs.edit', $terrainCertif)
             ->withSuccess(__('crud.common.created'));
     }
+    
+    /**
+     * @param \App\Http\Requests\TerrainCertifStoreRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeFront(TerrainCertifStoreRequest $request)
+    {
+        // $this->authorize('create', TerrainCertif::class);
+
+        $validated = $request->validated();
+
+        $terrainCertif = TerrainCertif::create($validated);
+
+        return view("frontend.op-success");
+        // redirect()
+        //     ->route('terrain-certifs.edit', $terrainCertif)
+        //     ->withSuccess(__('crud.common.created'));
+    }
 
     /**
      * @param \Illuminate\Http\Request $request

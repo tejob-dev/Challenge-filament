@@ -1,0 +1,31 @@
+/* Style de la case à cocher */
+.checkbox {
+width: 20px;
+height: 20px;
+border-radius: 50%; /* forme en cercle */
+border: 2px solid #4beee9; /* bordure rouge */
+display: inline-block;
+}
+
+/* Style de la coche "V" */
+.checkbox::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: white; /* couleur blanche */
+/*border: 2px solid red; */
+visibility: hidden;
+}
+
+/* Style de la coche "V" lorsque la case est cochée */
+.checkbox:checked::before {
+    visibility: visible;
+    background-color: #003279;
+    width: 21px;
+    height: 21px;
+}

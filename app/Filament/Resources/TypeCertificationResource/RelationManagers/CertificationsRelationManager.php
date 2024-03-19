@@ -17,6 +17,8 @@ class CertificationsRelationManager extends RelationManager
 
     protected static ?string $recordTitleAttribute = 'nom_prenom';
 
+    protected static ?string $label = 'Certifications';
+
     public static function form(Form $form): Form
     {
         return $form->schema([

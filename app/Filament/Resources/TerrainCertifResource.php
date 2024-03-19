@@ -317,8 +317,8 @@ class TerrainCertifResource extends Resource
                         'Particulier' => 'Particulier',
                         'Groupement' => 'Groupement',
                     ]),
-            ])
-            ->filters([DateRangeFilter::make('created_at')]);
+                ]);
+            // ->filters([DateRangeFilter::make('created_at')]);
     }
 
     public static function getRelations(): array

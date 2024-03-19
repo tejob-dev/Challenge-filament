@@ -78,15 +78,15 @@ class ContactResource extends Resource
                             'lg' => 12,
                         ]),
 
-                    TextInput::make('your-consent')
-                        ->rules(['max:255', 'string'])
-                        ->nullable()
-                        ->placeholder('Your Consent')
-                        ->columnSpan([
-                            'default' => 12,
-                            'md' => 12,
-                            'lg' => 12,
-                        ]),
+                    // TextInput::make('your-consent')
+                    //     ->rules(['max:255', 'string'])
+                    //     ->nullable()
+                    //     ->placeholder('Your Consent')
+                    //     ->columnSpan([
+                    //         'default' => 12,
+                    //         'md' => 12,
+                    //         'lg' => 12,
+                    //     ]),
                 ]),
             ]),
         ]);
@@ -117,12 +117,12 @@ class ContactResource extends Resource
                     ->toggleable()
                     ->searchable()
                     ->limit(50),
-                Tables\Columns\TextColumn::make('your-consent')
-                    ->toggleable()
-                    ->searchable(true, null, true)
-                    ->limit(50),
-            ])
-            ->filters([DateRangeFilter::make('created_at')]);
+                // Tables\Columns\TextColumn::make('your-consent')
+                //     ->toggleable()
+                //     ->searchable(true, null, true)
+                //     ->limit(50),
+            ]);
+            // ->filters([DateRangeFilter::make('created_at')]);
     }
 
     public static function getRelations(): array

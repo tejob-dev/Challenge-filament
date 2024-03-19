@@ -1,0 +1,188 @@
+/* Modal */
+.modal {
+  display: none; /* caché initialement */
+  position: fixed;
+  z-index: 6000;
+  left: 0;
+  top: 0%;
+  padding-top: 12%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* noir transparent */
+  transition: all 2s linear;
+}
+
+/* Contenu du modal */
+.modal-content {
+  background-color: #fefefe; /* fond blanc */
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* largeur de 50% de la largeur totale */
+  border-radius: 25px; /* arrondi de 25px sur les chaque côté */
+}
+
+/* Bouton de fermeture */
+.close {
+  color: #aaa;
+  float: right;
+  top: 19%!important;
+  right: 22%!important;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Header du modal */
+.modal-header h2 {
+  margin-top: 0;
+}
+
+/* Corps du modal */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-row div {
+  margin: 0 10px!important;
+  width: 100%;
+}
+
+.input-row div input,
+.input-row div select {
+  height: 50px;
+  color: blue; /* couleur du texte en bleu */
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+th {
+  font-weight: bold;
+}
+
+#myModal input, #myModal select{
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    --mdb-red: #f44336;
+    --mdb-pink: #e91e63;
+    --mdb-purple: purple-500;
+    --mdb-indigo: #3f51b5;
+    --mdb-blue: #2196f3;
+    --mdb-cyan: #00bcd4;
+    --mdb-teal: #009688;
+    --mdb-green: #4caf50;
+    --mdb-yellow: #ffeb3b;
+    --mdb-orange: #ff9800;
+    --mdb-white: #fff;
+    --mdb-black: #000;
+    --mdb-gray: #757575;
+    --mdb-gray-dark: #4f4f4f;
+    --mdb-gray-50: #fbfbfb;
+    --mdb-gray-100: #f5f5f5;
+    --mdb-gray-200: #eee;
+    --mdb-gray-300: #e0e0e0;
+    --mdb-gray-400: #bdbdbd;
+    --mdb-gray-500: #9e9e9e;
+    --mdb-gray-600: #757575;
+    --mdb-gray-700: #616161;
+    --mdb-gray-800: #4f4f4f;
+    --mdb-gray-900: #262626;
+    --mdb-primary: #3b71ca;
+    --mdb-secondary: #9fa6b2;
+    --mdb-success: #14a44d;
+    --mdb-danger: #dc4c64;
+    --mdb-warning: #e4a11b;
+    --mdb-info: #54b4d3;
+    --mdb-light: #fbfbfb;
+    --mdb-dark: #332d2d;
+    --mdb-primary-rgb: 59,113,202;
+    --mdb-secondary-rgb: 159,166,178;
+    --mdb-success-rgb: 20,164,77;
+    --mdb-danger-rgb: 220,76,100;
+    --mdb-warning-rgb: 228,161,27;
+    --mdb-info-rgb: 84,180,211;
+    --mdb-light-rgb: 251,251,251;
+    --mdb-dark-rgb: 51,45,45;
+    --mdb-white-rgb: 255,255,255;
+    --mdb-black-rgb: 0,0,0;
+    --mdb-body-color-rgb: 79,79,79;
+    --mdb-body-bg-rgb: 255,255,255;
+    --mdb-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --mdb-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --mdb-gradient: linear-gradient(180deg,hsla(0,0%,100%,0.15),hsla(0,0%,100%,0));
+    --mdb-body-font-family: var(--mdb-font-roboto);
+    --mdb-body-font-size: 1rem;
+    --mdb-body-font-weight: 400;
+    --mdb-body-line-height: 1.6;
+    --mdb-body-color: #4f4f4f;
+    --mdb-body-bg: #fff;
+    --mdb-border-width: 1px;
+    --mdb-border-style: solid;
+    --mdb-border-color: #e0e0e0;
+    --mdb-border-color-translucent: rgba(0,0,0,0.175);
+    --mdb-border-radius: 0.25rem;
+    --mdb-border-radius-sm: 0.25rem;
+    --mdb-border-radius-lg: 0.5rem;
+    --mdb-border-radius-xl: 1rem;
+    --mdb-border-radius-2xl: 2rem;
+    --mdb-border-radius-pill: 50rem;
+    --mdb-link-color: #3b71ca;
+    --mdb-link-hover-color: #386bc0;
+    --mdb-code-color: #e91e63;
+    --mdb-highlight-bg: #fff9c4;
+    --mdb-font-roboto: "Roboto",sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --mdb-gutter-x: 1.5rem;
+    --mdb-gutter-y: 0;
+    --mdb-bg-opacity: 1;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #4f4f4f;
+    appearance: none;
+    border-radius: .25rem;
+    box-shadow: none;
+    animation-name: onautofillcancel;
+    min-height: auto;
+    padding: .32rem .75rem;
+    border: 1px solid gray;
+    background: transparent;
+    transition: all .2s linear;
+}
+
+#myModal > div > div.modal-body > div:nth-child(2) > div:nth-child(1) > span {
+    display: none!important;
+}

@@ -57,6 +57,37 @@ class AcheteNowController extends Controller
             ->route('achete-nows.edit', $acheteNow)
             ->withSuccess(__('crud.common.created'));
     }
+    
+    /**
+     * @param \App\Http\Requests\AcheteNowStoreRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeFront(AcheteNowStoreRequest $request)
+    {
+        // $this->authorize('create', AcheteNow::class);
+
+        $validated = $request->validated();
+
+        $etat_achat = $validated["etat_achat"];
+        unset($validated["etat_achat"]);
+        $surface_annexe = $validated["surface_annexe"];
+        unset($validated["surface_annexe"]);
+        $exigence_particuliere = $validated["exigence_particuliere"];
+        unset($validated["exigence_particuliere"]);
+
+        $acheteNow = AcheteNow::create($validated);
+
+        if($acheteNow){
+            $acheteNow->etatAchats()->attach($etat_achat, []);
+            $acheteNow->exigenceParticulieres()->attach($exigence_particuliere, []);
+            $acheteNow->surfaceAnnexes()->attach($surface_annexe, []);
+        }
+
+        return view("frontend.op-success");
+        // return redirect()
+        //     ->route('achete-nows.edit', $acheteNow)
+        //     ->withSuccess(__('crud.common.created'));
+    }
 
     /**
      * @param \Illuminate\Http\Request $request

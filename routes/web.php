@@ -18,6 +18,9 @@ use App\Http\Controllers\CritereImmeubleController;
 use App\Http\Controllers\ExigenceImmeubleController;
 use App\Http\Controllers\TypeCertificationController;
 use App\Http\Controllers\ExigenceParticuliereController;
+use App\Models\Certification;
+use App\Models\MaisonCertif;
+use App\Models\TerrainCertif;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,12 +46,66 @@ Route::get('/connexion', function(){
     return redirect("/admin");
 });
 
+Route::redirect('/inscription', '/inscription.html', 302);
+Route::redirect('/service.html', 'solution-acquereur', 302);
+Route::redirect('/about.html', 'challenge-pro', 302);
+Route::redirect('/parrain.html', 'parrainage', 302);
+Route::redirect('/contact.html', 'contact', 302);
+
+Route::get('/notavailable', function(){
+    return view("frontend.404");
+});
+Route::get('/', function(){
+    //return view("frontend.index2");
+    return view("frontend.index2");
+    // return view("frontend.index");
+});
+Route::get('/index2.html', function(){
+});
+Route::get('/index.html', function(){
+    return view("frontend.index");
+});
+Route::get('/inscription.html', function(){
+    return view("frontend.about");
+});
+Route::get('/solution-acquereur', function(){
+    return view("frontend.service");
+});
+Route::get('/bon-plan', function(){
+    return view("frontend.bon-plan");
+});
+// Route::get('/challenge-pro', function(){
+//     return view("frontend.about");
+// });
+Route::get('/parrainage', function(){
+    return view("frontend.parrain");
+});
+Route::get('/contact', function(){
+    return view("frontend.contact");
+});
+
+Route::get('/action/op-success', function(){
+    return view("frontend.op-success");
+})->name("frontend.op-success");
+
+Route::post("/data/certification", [CertificationController::class, "storeFront"]);
+
+Route::post("/data/maisoncertif", [MaisonCertifController::class, "storeFront"]);
+
+Route::post("/data/terraincertif", [TerrainCertifController::class, "storeFront"]);
+
+Route::post("/data/prendrerdv", [RendezVousController::class, "storeFront"]);
+
+Route::post("/data/achetemaintenant", [AcheteNowController::class, "storeFront"]);
+
+Route::post("/data/contact", [ContactController::class, "storeFront"]);
+
 Route::prefix('/')
-    ->middleware('auth')
-    ->group(function () {
+->middleware('auth')
+->group(function () {
         Route::resource('roles', RoleController::class);
         Route::resource('permissions', PermissionController::class);
-
+        
         Route::resource('contacts', ContactController::class);
         Route::resource('users', UserController::class);
         Route::resource('maison-certifs', MaisonCertifController::class);
@@ -87,7 +144,7 @@ Route::prefix('/')
         
     });
     
-        Route::resource('type-de-surfaces', TypeDeSurfaceController::class);
+    Route::resource('type-de-surfaces', TypeDeSurfaceController::class);
     Route::resource('etat-achats', EtatAchatController::class);
     Route::resource(
         'exigence-particulieres',

@@ -3,13 +3,17 @@
 namespace App\Filament\Resources;
 
 use App\Models\MaisonCertif;
+use App\Models\TypeDeSurface;
 use Filament\{Tables, Forms};
-use Filament\Resources\{Form, Table, Resource};
-use Filament\Forms\Components\Grid;
+use App\Models\CritereImmeuble;
+use App\Models\ExigenceImmeuble;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Filters\DateRangeFilter;
+use Filament\Forms\Components\CheckboxList;
+use Filament\Resources\{Form, Table, Resource};
 use App\Filament\Resources\MaisonCertifResource\Pages;
 
 class MaisonCertifResource extends Resource
@@ -222,6 +226,30 @@ class MaisonCertifResource extends Resource
                             'md' => 12,
                             'lg' => 12,
                         ]),
+                    CheckboxList::make('typeDeSurfaces')
+                        ->relationship('typeDeSurfaces', 'Type de surfaces')
+                        ->options(TypeDeSurface::pluck('libel', 'id'))
+                        ->columnSpan([
+                            'default' => 12,
+                            'md' => 12,
+                            'lg' => 12,
+                        ]),
+                    CheckboxList::make('critereImmeubles')
+                        ->relationship('critereImmeubles', 'Critère d\'immeubles')
+                        ->options(CritereImmeuble::pluck('libel', 'id'))
+                        ->columnSpan([
+                            'default' => 12,
+                            'md' => 12,
+                            'lg' => 12,
+                        ]),
+                    CheckboxList::make('exigenceImmeubles')
+                        ->relationship('exigenceImmeubles', 'Exigence d\'immeubles')
+                        ->options(ExigenceImmeuble::pluck('libel', 'id'))
+                        ->columnSpan([
+                            'default' => 12,
+                            'md' => 12,
+                            'lg' => 12,
+                        ]),
                 ]),
             ]),
         ]);
@@ -322,16 +350,25 @@ class MaisonCertifResource extends Resource
                         'Non' => 'Non',
                         'Oui' => 'Oui',
                     ]),
-            ])
-            ->filters([DateRangeFilter::make('created_at')]);
+                Tables\Columns\TextColumn::make('typeDeSurfaces')->label('Type de surfaces')->getStateUsing( function ($record){
+                        return $record->typeDeSurfaces->pluck('libel')->first();
+                     }),
+                Tables\Columns\TextColumn::make('critereImmeubles')->label('Critère d\'immeubles')->getStateUsing( function ($record){
+                        return $record->critereImmeubles->pluck('libel')->first();
+                     }),
+                Tables\Columns\TextColumn::make('exigenceImmeubles')->label('Exigence d\'immeubles')->getStateUsing( function ($record){
+                        return $record->exigenceImmeubles->pluck('libel')->first();
+                     }),
+                ]);
+            // ->filters([DateRangeFilter::make('created_at')]);
     }
 
     public static function getRelations(): array
     {
         return [
-            MaisonCertifResource\RelationManagers\TypeDeSurfacesRelationManager::class,
-            MaisonCertifResource\RelationManagers\CritereImmeublesRelationManager::class,
-            MaisonCertifResource\RelationManagers\ExigenceImmeublesRelationManager::class,
+            // MaisonCertifResource\RelationManagers\TypeDeSurfacesRelationManager::class,
+            // MaisonCertifResource\RelationManagers\CritereImmeublesRelationManager::class,
+            // MaisonCertifResource\RelationManagers\ExigenceImmeublesRelationManager::class,
         ];
     }
 

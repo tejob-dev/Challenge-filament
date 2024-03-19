@@ -29,6 +29,7 @@ class CertificationStoreRequest extends FormRequest
             'email' => 'nullable|email',
             'contact' => 'nullable|max:255|string',
             'typebien' => 'nullable|max:255|string',
+            'type_certif' => 'array',
         ];
     }
 }

@@ -60,6 +60,36 @@ class MaisonCertifController extends Controller
             ->route('maison-certifs.edit', $maisonCertif)
             ->withSuccess(__('crud.common.created'));
     }
+    
+    /**
+     * @param \App\Http\Requests\MaisonCertifStoreRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeFront(MaisonCertifStoreRequest $request)
+    {
+        // $this->authorize('create', MaisonCertif::class);
+
+        $validated = $request->validated();
+
+        $type_surface = $validated["type_surface"];
+        unset($validated["type_surface"]);
+        $critere_immeuble = $validated["critere_immeuble"];
+        unset($validated["critere_immeuble"]);
+        $exigence_immeuble = $validated["exigence_immeuble"];
+        unset($validated["exigence_immeuble"]);
+
+        $maisonCertif = MaisonCertif::create($validated);
+
+        if($maisonCertif){
+            $maisonCertif->typeDeSurfaces()->attach($type_surface, []);
+            $maisonCertif->critereImmeubles()->attach($critere_immeuble, []);
+            $maisonCertif->exigenceImmeubles()->attach($exigence_immeuble, []);
+        }
+
+        return view("frontend.op-success");
+            // ->route('maison-certifs.edit', $maisonCertif)
+            // ->withSuccess(__('crud.common.created'));
+    }
 
     /**
      * @param \Illuminate\Http\Request $request

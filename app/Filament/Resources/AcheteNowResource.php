@@ -3,13 +3,18 @@
 namespace App\Filament\Resources;
 
 use App\Models\AcheteNow;
+use App\Models\EtatAchat;
+use App\Models\SurfaceAnnexe;
+use App\Models\TypeDeSurface;
 use Filament\{Tables, Forms};
-use Filament\Resources\{Form, Table, Resource};
-use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Grid;
+use App\Models\ExigenceParticuliere;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Filters\DateRangeFilter;
+use Filament\Forms\Components\CheckboxList;
+use Filament\Resources\{Form, Table, Resource};
 use App\Filament\Resources\AcheteNowResource\Pages;
 
 class AcheteNowResource extends Resource
@@ -202,6 +207,30 @@ class AcheteNowResource extends Resource
                             'md' => 12,
                             'lg' => 12,
                         ]),
+                    CheckboxList::make('etatAchats')
+                        ->relationship('etatAchats', 'Etat d\'achats')
+                        ->options(EtatAchat::pluck('libel', 'id'))
+                        ->columnSpan([
+                            'default' => 12,
+                            'md' => 12,
+                            'lg' => 12,
+                        ]),
+                    CheckboxList::make('exigenceParticulieres')
+                        ->relationship('exigenceParticulieres', 'Exigence particulières')
+                        ->options(ExigenceParticuliere::pluck('libel', 'id'))
+                        ->columnSpan([
+                            'default' => 12,
+                            'md' => 12,
+                            'lg' => 12,
+                        ]),
+                    CheckboxList::make('surfaceAnnexes')
+                        ->relationship('surfaceAnnexes', 'Surface annexes')
+                        ->options(SurfaceAnnexe::pluck('libel', 'id'))
+                        ->columnSpan([
+                            'default' => 12,
+                            'md' => 12,
+                            'lg' => 12,
+                        ]),
                 ]),
             ]),
         ]);
@@ -286,16 +315,25 @@ class AcheteNowResource extends Resource
                 Tables\Columns\TextColumn::make('surface')
                     ->toggleable()
                     ->searchable(true, null, true),
-            ])
-            ->filters([DateRangeFilter::make('created_at')]);
+                Tables\Columns\TextColumn::make('etatAchats')->label('Etat achats')->getStateUsing( function ($record){
+                        return $record->etatAchats->pluck('libel')->first();
+                     }),
+                Tables\Columns\TextColumn::make('exigenceParticulieres')->label('Exigence particulières')->getStateUsing( function ($record){
+                        return $record->exigenceParticulieres->pluck('libel')->first();
+                     }),
+                Tables\Columns\TextColumn::make('surfaceAnnexes')->label('Eurface annexes')->getStateUsing( function ($record){
+                        return $record->surfaceAnnexes->pluck('libel')->first();
+                     }),
+                ]);
+            // ->filters([DateRangeFilter::make('created_at')]);
     }
 
     public static function getRelations(): array
     {
         return [
-            AcheteNowResource\RelationManagers\EtatAchatsRelationManager::class,
-            AcheteNowResource\RelationManagers\ExigenceParticulieresRelationManager::class,
-            AcheteNowResource\RelationManagers\SurfaceAnnexesRelationManager::class,
+            // AcheteNowResource\RelationManagers\EtatAchatsRelationManager::class,
+            // AcheteNowResource\RelationManagers\ExigenceParticulieresRelationManager::class,
+            // AcheteNowResource\RelationManagers\SurfaceAnnexesRelationManager::class,
         ];
     }
 

@@ -4,10 +4,12 @@ namespace App\Filament\Resources\CertificationResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Tables;
-use Filament\Resources\{Form, Table};
+use App\Models\TypeCertification;
 use Filament\Forms\Components\Grid;
+use Filament\Resources\{Form, Table};
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\CheckboxList;
 use Filament\Resources\RelationManagers\RelationManager;
 
 class TypeCertificationsRelationManager extends RelationManager
@@ -15,6 +17,8 @@ class TypeCertificationsRelationManager extends RelationManager
     protected static string $relationship = 'typeCertifications';
 
     protected static ?string $recordTitleAttribute = 'libel';
+    
+    protected static ?string $label = 'Type de certification';
 
     public static function form(Form $form): Form
     {
@@ -34,9 +38,9 @@ class TypeCertificationsRelationManager extends RelationManager
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([Tables\Columns\TextColumn::make('libel')->limit(50)])
-            ->filters([
-                Tables\Filters\Filter::make('created_at')
+        ->columns([Tables\Columns\TextColumn::make('libel')->limit(50)])
+        ->filters([
+            Tables\Filters\Filter::make('created_at')
                     ->form([
                         Forms\Components\DatePicker::make('created_from'),
                         Forms\Components\DatePicker::make('created_until'),

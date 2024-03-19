@@ -1,0 +1,83 @@
+.f-name, .f-subject, .f-service, .f-email {
+    margin: 0px 5%;
+    font: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+    margin-right: 5px;
+    border-radius: 10px !important;
+    -webkit-appearance: button;
+    cursor: pointer;
+    transition: all .2s linear;
+    width: 90% !important;
+    letter-spacing: 0;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 20px 30px !important;
+    font-family: 'Inter', 'Arial', 'sans-serif' !important;
+    background: transparent !important;
+    border: 2px solid #4beee9 !important;
+    color: #4beee9;
+}
+
+.f-name > p:nth-child(1),
+.f-subject > p:nth-child(1),
+.f-service > p:nth-child(1),
+.f-email > p:nth-child(1){
+    text-align: left;
+    padding: 15px 5px;
+    text-transform:uppercase;
+    font-weight: 600 !important;
+}
+
+.cforms-required{
+    color: red!important;
+}
+
+#form-register-modal>div.nyssa-form-simple-wide select, #form-register-modal2>div.nyssa-multiple-fields select {
+    height: 56px;
+    margin-top: 0;
+}
+
+.wpcf7 input[type=number],
+select.wpcf7 {
+    font: inherit;
+    color: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: 15px !important;
+    font-weight: 500;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    background: #fff;
+    margin: 0 !important;
+    max-width: 100%;
+    border: 1px solid #d6d5d9 !important;
+}
+
+
+.wpcf7 select {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    background: #fff;
+    border: none;
+    margin: 10px 0;
+    height: 51px;
+    border: 1px solid #2b2929;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+
+#wpcf7-f831-o1>div.nyssa-form-simple-wide>div.f-service>p:nth-child(2)>span>span,
+#form-register-modal > div > div > p:nth-child(2) > span > span {
+    display: none;
+}

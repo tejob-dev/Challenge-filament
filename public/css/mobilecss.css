@@ -1,0 +1,43 @@
+@media (max-width: 740px) {
+    #big_footer{
+        margin-top: 18%;
+    }
+
+    #cbpw-wrap130 > div.cbp-l-grid-gallery.cbp.cbp-caption-active.cbp-caption-overlayBottomPush.cbp-reset-caption.cbp-ready.cbp-popup-singlePageInline-open > div.cbp-popup-singlePageInline.cbp-popup-singlePageInline-ready > div.cbp-popup-content > div > div > div.projects_media.left_media.col-md-6{
+        display: none;
+    }
+
+    div.pointerval{
+        width: 40%;
+    }
+
+    #bg_image_accueil{
+        background: url(&quot;/img/br_accueil_transparence.png&quot;) center center / 100% no-repeat;
+        touch-action: manipulation;
+        background-position: right!important;
+        background-size: 70%!important;
+    }
+}
+
+@media (max-width: 420px) {
+
+    #bg_image_accueil{
+        background: url(&quot;/img/br_accueil_transparence.png&quot;) center center / 100% no-repeat;
+        touch-action: manipulation;
+        background-position: right!important;
+        background-size: 60%!important;
+        margin-left: 1%;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .make-display-flex{
+        display: initial;
+    }
+
+    .make-display-grid-3col {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

@@ -102,8 +102,8 @@ class RendezVousResource extends Resource
                     ->toggleable()
                     ->searchable(true, null, true)
                     ->limit(50),
-            ])
-            ->filters([DateRangeFilter::make('created_at')]);
+            ]);
+            // ->filters([DateRangeFilter::make('created_at')]);
     }
 
     public static function getRelations(): array

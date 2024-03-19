@@ -57,6 +57,24 @@ class RendezVousController extends Controller
             ->route('all-rendez-vous.edit', $rendezVous)
             ->withSuccess(__('crud.common.created'));
     }
+    
+    /**
+     * @param \App\Http\Requests\RendezVousStoreRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeFront(RendezVousStoreRequest $request)
+    {
+        // $this->authorize('create', RendezVous::class);
+
+        $validated = $request->validated();
+
+        $rendezVous = RendezVous::create($validated);
+
+        return view("frontend.op-success");
+        // return redirect()
+        //     ->route('all-rendez-vous.edit', $rendezVous)
+        //     ->withSuccess(__('crud.common.created'));
+    }
 
     /**
      * @param \Illuminate\Http\Request $request

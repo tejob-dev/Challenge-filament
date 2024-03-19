@@ -39,6 +39,9 @@ class MaisonCertifStoreRequest extends FormRequest
             'type_construction' => 'nullable|max:255|string',
             'type_emploi' => 'nullable|max:255|string',
             'proprietaire' => 'nullable|max:255|string',
+            'type_surface' => 'array',
+            'critere_immeuble' => 'array',
+            'exigence_immeuble' => 'array',
         ];
     }
 }

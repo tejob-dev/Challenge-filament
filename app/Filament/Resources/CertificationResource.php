@@ -4,12 +4,19 @@ namespace App\Filament\Resources;
 
 use App\Models\Certification;
 use Filament\{Tables, Forms};
-use Filament\Resources\{Form, Table, Resource};
-use Filament\Forms\Components\Grid;
+use TypeCertificationsColumn;
+use App\Models\TypeCertification;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use App\Filament\Filters\DateRangeFilter;
+use Filament\Forms\Components\MultiSelect;
+use Filament\Forms\Components\CheckboxList;
+use Filament\Tables\Columns\CheckboxColumn;
+use Filament\Tables\Filters\MultiSelectFilter;
+use Filament\Resources\{Form, Table, Resource};
+use App\Filament\Tables\TypeCertificationsTable;
 use App\Filament\Resources\CertificationResource\Pages;
 
 class CertificationResource extends Resource
@@ -77,9 +84,18 @@ class CertificationResource extends Resource
                             'default' => 12,
                             'md' => 12,
                             'lg' => 12,
+                        ]),      
+                    CheckboxList::make('typeCertifications')
+                        ->relationship('typeCertifications', 'Type de certification')
+                        ->options(TypeCertification::pluck('libel', 'id'))
+                        ->columnSpan([
+                            'default' => 12,
+                            'md' => 12,
+                            'lg' => 12,
                         ]),
                 ]),
             ]),
+            
         ]);
     }
 
@@ -88,37 +104,40 @@ class CertificationResource extends Resource
         return $table
             ->poll('60s')
             ->columns([
-                Tables\Columns\TextColumn::make('nom_prenom')
-                    ->toggleable()
-                    ->searchable(true, null, true)
-                    ->limit(50),
-                Tables\Columns\TextColumn::make('adresse')
-                    ->toggleable()
-                    ->searchable(true, null, true)
-                    ->limit(50),
-                Tables\Columns\TextColumn::make('email')
-                    ->toggleable()
-                    ->searchable(true, null, true)
-                    ->limit(50),
-                Tables\Columns\TextColumn::make('contact')
-                    ->toggleable()
-                    ->searchable(true, null, true)
-                    ->limit(50),
-                Tables\Columns\TextColumn::make('typebien')
-                    ->toggleable()
-                    ->searchable()
-                    ->enum([
-                        'Maison' => 'Maison',
-                        'Terrain' => 'Terrain',
-                    ]),
-            ])
-            ->filters([DateRangeFilter::make('created_at')]);
+                    Tables\Columns\TextColumn::make('nom_prenom')
+                        ->toggleable()
+                        ->searchable(true, null, true)
+                        ->limit(50),
+                    Tables\Columns\TextColumn::make('adresse')
+                        ->toggleable()
+                        ->searchable(true, null, true)
+                        ->limit(50),
+                    Tables\Columns\TextColumn::make('email')
+                        ->toggleable()
+                        ->searchable(true, null, true)
+                        ->limit(50),
+                    Tables\Columns\TextColumn::make('contact')
+                        ->toggleable()
+                        ->searchable(true, null, true)
+                        ->limit(50),
+                    Tables\Columns\TextColumn::make('typebien')
+                        ->toggleable()
+                        ->searchable(true, null, true)
+                        ->enum([
+                            'Maison' => 'Maison',
+                            'Terrain' => 'Terrain',
+                        ]),
+                    Tables\Columns\TextColumn::make('typeCertifications')->label('Type de certifications')->getStateUsing( function ($record){
+                        return $record->typeCertifications->pluck('libel')->implode(", ");
+                     }),
+            ]);
+            // ->filters([DateRangeFilter::make('created_at')]);
     }
 
     public static function getRelations(): array
     {
         return [
-            CertificationResource\RelationManagers\TypeCertificationsRelationManager::class,
+            // CertificationResource\RelationManagers\TypeCertificationsRelationManager::class,
         ];
     }
 

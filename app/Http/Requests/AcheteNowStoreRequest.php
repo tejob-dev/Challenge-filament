@@ -40,6 +40,9 @@ class AcheteNowStoreRequest extends FormRequest
             'filtrag_annonce' => 'required|max:255|string',
             'nbr_chambre' => 'nullable|max:255|string',
             'surface' => 'nullable|max:255|string',
+            'etat_achat' => 'array',
+            'surface_annexe' => 'array',
+            'exigence_particuliere' => 'array',
         ];
     }
 }

@@ -54,6 +54,24 @@ class ContactController extends Controller
             ->route('contacts.edit', $contact)
             ->withSuccess(__('crud.common.created'));
     }
+    
+    /**
+     * @param \App\Http\Requests\ContactStoreRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeFront(ContactStoreRequest $request)
+    {
+        // $this->authorize('create', Contact::class);
+
+        $validated = $request->validated();
+
+        $contact = Contact::create($validated);
+
+        return view("frontend.op-success");
+        // return redirect()
+        //     ->route('contacts.edit', $contact)
+        //     ->withSuccess(__('crud.common.created'));
+    }
 
     /**
      * @param \Illuminate\Http\Request $request
