@@ -3849,7 +3849,7 @@
                                                             <p role="status" aria-live="polite" aria-atomic="true"></p>
                                                             <ul></ul>
                                                         </div>
-                                                        <form id="feuille-enregistement" action="{{ route('font.challengerpros.store') }}" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                                        <form id="feuille-enregistement" action="" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
                                                              -->
                                                             <!-- @method("PUT") -->
                                                             <!-- <div class="nyssa-multiple-fields dark">
