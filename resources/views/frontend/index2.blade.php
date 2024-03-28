@@ -3236,15 +3236,6 @@
                         <li id="mobile-nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
                             <a href="/inscription.html" class="menu-link main-menu-link outsider">Inscription</a>
                         </li>
-                        <!-- <li id="mobile-nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
-                            <a href="/about.html" class="menu-link main-menu-link outsider">Challenge Pro</a>
-                        </li>
-                        <li id="mobile-nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
-                            <a href="/bon-plan" class="menu-link main-menu-link outsider">Bon plans</a>
-                        </li>
-                        <li id="mobile-nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
-                            <a href="/parrain.html" class="menu-link main-menu-link outsider">Parrainage</a>
-                        </li> -->
                         <li id="mobile-nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
                             <a href="/contact.html" class="menu-link main-menu-link outsider">Contact</a>
                         </li>
@@ -3259,15 +3250,6 @@
                             <li id="nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
                                 <a href="/inscription.html" class="menu-link main-menu-link outsider">Inscription</a>
                             </li>
-                            <!-- <li id="nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
-                                <a href="/about.html" class="menu-link main-menu-link outsider">Challenge Pro</a>
-                            </li>
-                            <li id="nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
-                                <a href="/bon-plan" class="menu-link main-menu-link outsider">Bon plans</a>
-                            </li>
-                            <li id="nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
-                                <a href="/parrain.html" class="menu-link main-menu-link outsider">Parrainage</a>
-                            </li> -->
                             <li id="nav-menu-item-3974" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children page-24">
                                 <a href="/contact.html" class="menu-link main-menu-link outsider">Contact</a>
                             </li>

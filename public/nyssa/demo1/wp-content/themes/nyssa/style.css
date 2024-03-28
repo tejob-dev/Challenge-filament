@@ -5183,7 +5183,7 @@ ol li {
     list-style-type: decimal;
     margin-top: 1%;
 }
-.nav > li{pointer-events:none;}
+/* .nav > li{pointer-events:none;} */
 .flex-direction-nav li {
     list-style: none;
     margin: 0;
